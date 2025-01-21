@@ -2,8 +2,8 @@ import pandas as pd
 import os
 # Load the datasets
 def load_datasets():
-    day_data_path = os.path.join(os.getcwd(), 'data', 'day.csv')
-    hour_data_path = os.path.join(os.getcwd(), 'data', 'hour.csv')
+    day_data = os.path.join(os.getcwd(), 'data', 'day.csv')
+    hour_data = os.path.join(os.getcwd(), 'data', 'hour.csv')
 
     # 1. Tahap Persiapan
     print("Preview of 'day.csv':")
