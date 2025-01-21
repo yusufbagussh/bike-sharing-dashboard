@@ -63,7 +63,7 @@ Explore the patterns of bike rentals using **RFM Analysis**, focusing on **seaso
 """)
 
 # Sidebar Filters
-st.sidebar.header("""Filter Options For Advanced Visualization""")
+st.sidebar.header("Filter For RFM Analysis")
 selected_season = st.sidebar.multiselect(
     "Select Season(s):",
     options=rfm_data['Season'].unique(),
@@ -137,24 +137,6 @@ ax.set_title('Average Daily Rentals by Season and Weather')
 ax.set_xlabel('Season')
 ax.set_ylabel('Avg Daily Rentals')
 ax.legend_.remove()
-st.pyplot(fig)
-
-# Frequency Visualization for Working Day
-st.subheader("Frequency: Total Rentals by Day Type")
-fig, ax = plt.subplots(figsize=(8, 5))
-sns.barplot(data=freq_workingday, x='Type', y='Frequency (Total Rentals)', palette='Blues_d', ax=ax)
-ax.set_title('Frequency of Rentals by Day Type')
-ax.set_xlabel('Day Type')
-ax.set_ylabel('Total Rentals')
-st.pyplot(fig)
-
-# Monetary Visualization for Working Day
-st.subheader("Monetary: Average Daily Rentals by Day Type")
-fig, ax = plt.subplots(figsize=(8, 5))
-sns.barplot(data=monetary_workingday, x='Type', y='Monetary (Avg Daily Rentals)', palette='Greens_d', ax=ax)
-ax.set_title('Average Daily Rentals by Day Type')
-ax.set_xlabel('Day Type')
-ax.set_ylabel('Avg Daily Rentals')
 st.pyplot(fig)
 
 # Footer
