@@ -2,8 +2,19 @@ import pandas as pd
 import os
 # Load the datasets
 def load_datasets():
-    day_data = os.path.join(os.getcwd(), 'data', 'day.csv')
-    hour_data = os.path.join(os.getcwd(), 'data', 'hour.csv')
+    # Define absolute paths for datasets
+    day_data_path = os.path.join(os.getcwd(), 'data', 'data_1.csv')
+    hour_data_path = os.path.join(os.getcwd(), 'data', 'data_2.csv')
+
+    # Check if files exist
+    if not os.path.exists(day_data_path):
+        raise FileNotFoundError(f"File not found: {day_data_path}. Please check the file path.")
+    if not os.path.exists(hour_data_path):
+        raise FileNotFoundError(f"File not found: {hour_data_path}. Please check the file path.")
+
+    # Load datasets
+    day_data = pd.read_csv(day_data_path)
+    hour_data = pd.read_csv(hour_data_path)
 
     # 1. Tahap Persiapan
     print("Preview of 'day.csv':")
