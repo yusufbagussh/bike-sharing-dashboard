@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 # Load the datasets
 def load_datasets():
     day_data_path = os.path.join(os.getcwd(), 'data', 'day.csv')
