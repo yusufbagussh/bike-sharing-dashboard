@@ -3,8 +3,8 @@ import os
 # Load the datasets
 def load_datasets():
     # Define absolute paths for datasets
-    day_data_path = os.path.join(os.getcwd(), 'data', 'data_1.csv')
-    hour_data_path = os.path.join(os.getcwd(), 'data', 'data_2.csv')
+    day_data_path = os.path.join(os.getcwd(), 'data', 'day.csv')
+    hour_data_path = os.path.join(os.getcwd(), 'data', 'hour.csv')
 
     # Check if files exist
     if not os.path.exists(day_data_path):
